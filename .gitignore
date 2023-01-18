@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+.mf
+.env
+.env.test
+.env.production
+.env.development
+.eslintcache
+*.tgz

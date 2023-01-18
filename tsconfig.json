@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "paths": {
+      "~/*": ["./src/*"],
+      "^/*": ["./test/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "types": ["vitest/globals", "@cloudflare/workers-types"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "skipLibCheck": true
+  }
+}
