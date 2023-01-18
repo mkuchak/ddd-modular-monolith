@@ -1,0 +1,7 @@
+name = "ddd-modular-monolith"
+compatibility_date = "2023-01-27"
+main = "./src/index.ts"
+# node_compat = true
+
+[env.dev]
+vars = { PORT = 3333, PASSWORD_HASH_SALT = 6, JWT_SECRET = "secret", JWT_EXPIRATION = 15, REFRESH_TOKEN_EXPIRATION = 90, RENEW_REFRESH_TOKEN_EXPIRATION = true }
