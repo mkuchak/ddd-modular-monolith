@@ -3,10 +3,13 @@ import { Email } from "~/module/auth/domain/entity/Email";
 import { Password } from "~/module/auth/domain/entity/Password";
 import { Session } from "~/module/auth/domain/entity/Session";
 
-export type IUserProps = ClassPropsExcept<User, "email" | "password"> & {
-  email: string;
-  password: string;
-};
+export type IUserProps = ClassProps<
+  User,
+  {
+    email: string;
+    password: string;
+  }
+>;
 
 export class User {
   id?: string = nanoid();

@@ -15,8 +15,8 @@ declare global {
       P
     >;
   }[keyof T];
-  type ClassProps<T> = Pick<T, WritableKeys<ExcludeMethods<T>>>;
-  type ClassPropsExcept<T, K extends keyof T> = Omit<ClassProps<T>, K>;
+  type ExtractClassProps<T> = Pick<T, WritableKeys<ExcludeMethods<T>>>;
+  type ClassProps<T, U = ExtractClassProps<T>> = Omit<ExtractClassProps<T>, keyof U> & U;
 }
 
 export {};
